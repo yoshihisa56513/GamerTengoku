@@ -1,0 +1,35 @@
+<h1><%= @game.gname %></h1><br>
+<p>
+<strong>Category</strong><br><%= @game.gcate %></p><br>
+<p><strong>Explanation</strong><br><%= @game.exp %></p>
+<ul>
+
+<li>
+<%= form_for [@game, @game.videos.build] do |f| %>
+<%= f.label :title %>
+<br>
+<%= f.text_field :title %>
+<br>
+<%= f.label :video_code %>
+<br>
+<%= f.text_area :video_code %>
+<br>
+<%= f.label :exp %>
+<br>
+<%= f.text_area :exp %>
+<br>
+<%= f.submit %>
+<% end %>
+<br>
+</li>
+<% @game.videos.each do |video| %>
+<p>
+<%= video.title %><br>
+<%= raw video.video_code %><br>
+<%= video.exp %> 
+</p>
+<br>
+<% end %>
+
+
+</ul>

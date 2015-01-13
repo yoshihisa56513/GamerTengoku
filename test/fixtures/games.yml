@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gname: MyString
+  gcate: MyString
+  exp: MyText
+
+two:
+  gname: MyString
+  gcate: MyString
+  exp: MyText
