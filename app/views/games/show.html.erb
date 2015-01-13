@@ -1,5 +1,5 @@
 <h1><%= @game.gname %></h1><br>
-<strong><%= link_to @game.gname, "https://gamertengoku.herokuapp.com/#{@game.id}/comments" %></strong>
+<strong><%= link_to @game.gname, game_comments_path(@game.id) %></strong>
 <p>
 <strong>Category</strong><br><%= @game.gcate %></p><br>
 <p><strong>Explanation</strong><br><%= @game.exp %></p>
