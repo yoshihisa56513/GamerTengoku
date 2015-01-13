@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   end
   
   def show
-    @game = Game.find(params[:id])
+    @game = Game.find(params[:id]).order("id DESC")
   end 
   
   def new 
