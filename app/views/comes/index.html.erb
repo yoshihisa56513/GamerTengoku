@@ -1,0 +1,27 @@
+<h1>Listing comes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Game</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comes.each do |come| %>
+      <tr>
+        <td><%= come.content %></td>
+        <td><%= come.game %></td>
+        <td><%= link_to 'Show', come %></td>
+        <td><%= link_to 'Edit', edit_come_path(come) %></td>
+        <td><%= link_to 'Destroy', come, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Come', new_come_path %>

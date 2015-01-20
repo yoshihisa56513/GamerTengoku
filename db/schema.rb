@@ -11,14 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120030952) do
+ActiveRecord::Schema.define(version: 20150120041611) do
+
+  create_table "comes", force: true do |t|
+    t.text     "content"
+    t.integer  "game_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comes", ["game_id"], name: "index_comes_on_game_id"
 
   create_table "comments", force: true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_id"
   end
 
   create_table "games", force: true do |t|

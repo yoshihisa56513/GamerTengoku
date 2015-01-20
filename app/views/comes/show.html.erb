@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @come.content %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @come.game %>
+</p>
+
+<%= link_to 'Edit', edit_come_path(@come) %> |
+<%= link_to 'Back', comes_path %>

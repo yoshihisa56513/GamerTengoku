@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :comes
+
   resources :games do
     resources :videos
     resources :comments
+    resources :comes
   end
 
   root 'projects#index'
