@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def index
     @game = Game.find(params[:game_id])
-    @comment = @game.comments.create(comment_params)
+   # @comment = @game.comments.create(comment_params)
     redirect_to :back
   end
 
@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
   private
   
   def comment_params
-    params[:game].permit(:title,:content)
+    
+    params[:comment].permit(:title,:content)
   end
 
 

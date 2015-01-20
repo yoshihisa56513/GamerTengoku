@@ -1,5 +1,6 @@
 <h1><%= @game.gname %></h1><br>
 <strong><%= link_to @game.gname, game_comments_path(@game.id) %></strong>
+<div id="left">
 <p>
 <strong>Category</strong><br><%= @game.gcate %></p><br>
 <p><strong>Explanation</strong><br><%= @game.exp %></p>
@@ -34,3 +35,9 @@
 
 
 </ul>
+
+</div>
+
+<div id="right">
+
+</div>
