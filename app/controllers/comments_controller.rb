@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
 
-  def index
-    @game = Game.find(params[:game_id])
+#  def index
+ #   @game = Game.find(params[:game_id])
    # @comment = @game.comments.create(comment_params)
-    redirect_to :back
-  end
+  #  redirect_to :back
+#  end
 
   def create
     @game = Game.find(params[:game_id])

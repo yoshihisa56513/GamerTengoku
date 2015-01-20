@@ -38,19 +38,19 @@
 
 </div>
 
-<div id="right">
-<ul>
-<li>
-<%= form_for [@game,@game.videos.build] do |v| %>
-<%= v.text_area :content %>
-<%= v.submit %>
-<% end %>
-</li>
+#<div id="right">
+#<ul>
+#<li>
+#<%= form_for [@game,@game.comments.build] do |v| %>
+#<%= v.text_area :content %>
+#<%= v.submit %>
+#<% end %>
+#</li>
 
-<% @game.comments.each do |c| %>
-<li>
-<%= c.content %> 
-</li>
-<% end %>
-</ul>
-</div>
+#<% @game.comments.each do |c| %>
+#<li>
+#<%= c.content %> 
+#</li>
+#<% end %>
+#</ul>
+#</div>
